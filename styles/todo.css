@@ -1,0 +1,108 @@
+#todo_tool {
+    height: 600px;
+    overflow-y: scroll;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    background-color: rgb(211, 211, 211);
+    border-radius: 30px;
+    width: 70%;
+}
+
+#input_box {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 120%;
+}
+
+#add_task {
+    font-size: 120%;
+    font-weight: 600;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: rgb(79, 79, 79);
+    border-radius: 30px;
+}
+
+#add_task:hover, #add_task:focus {
+    background-color: rgb(47, 47, 47);
+}
+
+.tool ul {
+    width: 70%;
+    margin: auto;
+}
+
+.tool ul li {
+    list-style: none;
+    font-size: 120%;
+    margin: 1em 0;
+    margin-left: 3em;
+    margin-right: 1em;
+    user-select: none;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tool ul li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    border: solid 1px black;
+    
+    top: 2px;
+    left: -40px;
+}
+
+
+.remove {
+    border: none;
+    background-color: rgb(211, 211, 211);
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.remove:hover, .remove:focus{
+    background-color: rgb(165, 165, 165);
+}
+
+.tool ul li.checked::before {
+    background-image: url(../images/checked.png);
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(0, 0, 0);
+    color: black;
+}
+
+@media screen and (max-width: 900px){
+    .row, .tool ul {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #add_task {
+        padding: 16px 20px;
+    }
+}
+

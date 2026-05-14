@@ -1,0 +1,148 @@
+header{
+    position: relative;
+    width: 100%;
+    z-index: 15;
+}
+
+.home_logo_container{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(79, 79, 79);
+    border: solid 2px rgb(255, 255, 255);
+    border-top: none;
+    margin-left: 50px;
+    float: left;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.419);
+    overflow: hidden;
+    position: relative;
+}
+
+.home_logo_container img {
+    width: 100%;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+#nav_menu{
+    background-color: rgba(28, 29, 30, 0.8);
+    width: 100%;
+}
+
+#nav_bar{
+    display: flex;
+    justify-content: start;
+}
+
+#nav_bar a{
+    padding: 0.7em 1em;
+    font-size: 160%;
+    text-decoration: none;
+    color: white;
+}
+
+#nav_bar a:hover, #nav_bar a:focus{
+    background-color: rgba(28, 29, 30);
+}
+
+#header_image_container{
+    height: 320px;
+    background-color: red;
+    margin-top: -150px;
+    align-self: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#header_image_container img{
+    height: 100%;
+    width: 100%;
+}
+
+#page_title{
+    font-weight: bolder;
+    margin-top: -75px;
+    padding: 0.5em 0.5em 0.5em 50px;
+    font-size: 220%;
+    background-color: rgba(28, 29, 30, 0.8);
+    color: white;
+    z-index: 13;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.685);
+    letter-spacing: 3px;
+}
+
+footer{
+    background-color: rgb(49, 51, 53);
+    height: 200px;
+    z-index: 13;
+}
+
+#footer_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: start;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+#footer_info ul{
+    color: white;
+    padding: 1em;
+    padding-left: 1.5em;
+    list-style: none;
+}
+
+#footer_info a, #footer_info a:visited{
+    color: white;
+}
+
+@media screen and (max-width: 920px){
+    #header_image_container{
+        margin-top: -100px;
+        height: 200px;
+    }
+
+    .home_logo_container{
+        height: 100px;
+        width: 100px;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    .slicknav_menu {
+        background-color:  rgb(49, 51, 53);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.685);
+    }
+
+    .slicknav_button {
+        text-align: left;
+    }
+
+    #mobile_menu {
+        display: block;
+    }
+
+    #mobile_menu a {
+        font-size: 120%;
+    }
+
+    #nav_bar {
+        display: none;
+    }
+
+    #page_title{
+        margin-top: -62px;
+        font-size: 180%;
+        padding: 0.5em;
+        padding-left: 1em;
+        z-index: 1;
+    }
+
+    #footer_info ul{
+        font-size: 80%;
+    }
+}
